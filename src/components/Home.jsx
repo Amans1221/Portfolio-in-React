@@ -1,65 +1,102 @@
-import React from 'react'
-import vg from "../assests/img-2.avif"
-import { AiFillGoogleCircle,AiFillAmazonCircle,AiFillYoutube,AiFillInstagram} from 'react-icons/ai';
-const Home = () => {
-    return (
-        <>
-            <div className="home" id="home">
-                <main>
-                    <h1>
-                        TechyHead
-                    </h1>
-                    <p>
-                        Solution to all your problems
-                    </p>
-                </main>
-            </div>
+import React, { useRef } from 'react'
+import { animate, motion } from "framer-motion"
+import  Typewriter from 'typewriter-effect';
+import {BsArrowUpRight, BsChevronDown} from "react-icons/bs"
+import me from "../assests/img1.png"
 
-            <div className="home2">
-                <img src={vg} alt="Graphics"></img>
+
+const Home = () => {
+const ClientCount = useRef(null);
+const ProjectCount = useRef(null);
+
+
+const animationclientcount = () =>{
+    animate(0,100,{
+        duration:1,
+        onUpdate:(v)=>(ClientCount.current.textContent = v.toFixed()),
+
+    });
+};
+const animationprojectcount = () =>{
+    animate(0,500,{
+        duration:1,
+        onUpdate:(v)=>(ProjectCount.current.textContent = v.toFixed()),
+
+    });
+};
+
+    const animation
+        = {
+        h1: {
+            initial: {
+                x: "-100%",
+                opacity: 0
+            },
+            whileInView: {
+                x: "0",
+                opacity: 1
+            },
+        },
+        button:{
+            initial: {
+                y: "-100%",
+                opacity: 0
+            },
+            whileInView: {
+                y: "0",
+                opacity: 1
+            },
+        }
+    }
+    return (
+        <div id="home">
+            <section>
                 <div>
-                    <p>
-                        We are your one and only solution to the tech problems you face
-                        everyday. We are leading tech company whose aim is to
-                        increase the problem solving ability in children.
-                    </p>
-                </div>
-            </div>
-            <div className="home3" id="about">
-                <div>
-                <h1>Who we are?</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis modi odit beatae assumenda, optio laborum maiores vel.
-                    Amet modi fugiat quidem animi at. Quasi veniam, possimus cumque ullam dolorem nihil maxime facilis itaque similique.
-                     Ut animi quasi cupiditate nulla eaque esse deleniti, totam nesciunt fugit? Necessitatibus in, ipsa minus tenetur quo 
-                     recusandae nesciunt fugit illo iusto aliquid voluptas nulla velit repellat culpa non ratione incidunt amet! Corporis
-                      tempore magnam voluptate commodi officia porro aliquam eos cum. Minima cum facere officia quas recusandae quae aspernatur
-                       minus repellendus, beatae incidunt obcaecati totam.</p>
-                </div>
-            </div>
-            <div className="home4" id="brands">
-                <div>
-                    <h1>Brands</h1>
+                    <motion.h1 {...animation.h1}>
+                        Hi I am <br /> Aman Singh
+                    </motion.h1>
+                    <Typewriter 
+                     options={{
+                        strings: ["A Developer","A Designer","A Creator"],
+                        autoStart: true,
+                        loop:true,
+                        cursor:"",
+                        wrapperClassName:"typewritterpara"
+                    }}
+                    />
+                    <div>
+                        <a href="mailto:aman@gmail.com">hire Me{" "}
+                        </a>
+                        <a href="#work">Project <BsArrowUpRight /> </a>
+                    </div>
                     <article>
-                        <div style={{animationDelay: "0.3s"}}>
-                            <AiFillGoogleCircle />
-                            <p>Google</p>
-                        </div>
-                        <div style={{animationDelay: "0.5s"}}>
-                            <AiFillAmazonCircle />
-                            <p>Amazon</p>
-                        </div>
-                        <div style={{animationDelay: "0.7s"}}>
-                            <AiFillYoutube />
-                            <p>Youtube</p>
-                        </div>
-                        <div style={{animationDelay: "0.1s"}}>
-                            <AiFillInstagram />
-                            <p>Instagram</p>
-                        </div>
+                        <p>
+                    <motion.span whileInView={animationclientcount} ref={ClientCount}></motion.span>
+                        </p>
+                        <span>Client Worldwide</span>
                     </article>
+                    <aside>
+                    <article>
+                        <p>
+                    <motion.span whileInView={animationprojectcount} ref={ProjectCount}></motion.span>
+                        
+                        </p>
+                        <span>Project Done</span>
+                    </article>
+                    <article data-special>
+                        <p>
+                           Contact
+                        </p>
+                        <span>aman@gmail.com</span>
+                    </article>
+                    </aside>
                 </div>
-            </div>
-        </>
+            </section>
+            <section>
+                <img src={me} alt="aman"></img>
+            </section>
+            <BsChevronDown />
+        </div>
     );
 }
 

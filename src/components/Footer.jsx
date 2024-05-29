@@ -1,21 +1,32 @@
 import React from 'react'
+import {  AiFillGithub, AiFillInstagram, AiFillYoutube, AiOutlineArrowUp } from 'react-icons/ai'
 
 const Footer = () => {
   return <footer>
     <div>
-        <h1>TechyHead</h1>
-        <p>@all right reserved</p>
+        <img src={"https://www.api2cart.com/wp-content/uploads/2014/11/Developer.png"} 
+        alt='Founder' 
+        />
+        <h2>Aman Singh</h2>
+        <p>Motivation is Temporary, but discipline is last forever.</p>
     </div>
+    <aside>
+      <h2>Social Media</h2>
 
-    <div>
-        <h5>Follow Us</h5>
-    <div>
-        <a href="http://youtube.com/react-demo" target={"blank"}>Youtube</a>
-        <a href="http://instagram.com/react-demo" target={"blank"}>Instagram</a>
-        <a href="http://facebook.com/react-demo" target={"blank"}>Facebook</a>
-        <a href="http://github.com/react-demo" target={"blank"}>Github</a>
-    </div>
-    </div>
+      <article>
+        <a href='http://youtube.com' target={"blank"}>
+          <AiFillYoutube />
+        </a>
+        <a href='https://github.com/Amans1221' target={"blank"}>
+          <AiFillGithub />
+        </a>
+        <a href='http://instagram.com' target={"blank"}>
+          <AiFillInstagram/>
+        </a>
+      </article>
+    </aside>
+      <a href='#home'><AiOutlineArrowUp /></a>
+
   </footer>
    
 }

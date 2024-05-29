@@ -1,0 +1,40 @@
+{
+
+    "project":[
+        {
+            "date":"22/05/2024",
+            "title":"React Vedio-hub demo",
+            "discription":"ReactJS is a popular JavaScript library for building user interfaces in web development. It's based on the MVC (Model, View, Controller) architecture and works by breaking down a web page into individual components.",
+            "url":"https://react-video-hub-silk.vercel.app/",
+            "imgSrc":"https://cdn.osxdaily.com/wp-content/uploads/2023/06/apple-vision-pro-interface-experience1-1536x822.jpg"
+        },
+        {
+            "date":"09/05/2024",
+            "title":"Portfolio in Angular",
+            "discription":"Angular is a TypeScript-based open source framework used to develop frontend web applications. It is the successor of AngularJS and all mentions of Angular refer to versions 2 and up. Angular has features like generics, static-typing, and also some ES6 features. ",
+            "url":"https://my-portfolio-bice-beta-72.vercel.app/",
+            "imgSrc":"https://i.etsystatic.com/8021043/r/il/a7252f/1674922631/il_1588xN.1674922631_pz95.jpg"
+        }
+        
+    ],
+
+    "experince":[{
+
+        "date":"14/02/2022",
+        "title":"Donet Developer"
+    },
+    {
+        "date":"13/01/2020",
+        "title":"Crm Developer"
+    },
+    {
+        "date":"18/01/2023",
+        "title":"Donet Developer"
+    },
+    {
+        "date":"17/01/2021",
+        "title":"Donet Developer"
+    }
+
+    ]
+}

@@ -32,7 +32,7 @@ window.addEventListener("resize", resizeRatio)
 }, [ratio])
 
 
-  return ratio < 2? (
+  return  (
 
     <>
     <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
@@ -49,6 +49,6 @@ window.addEventListener("resize", resizeRatio)
  
  
    </>
-   ) : <em id="customMessage">Please Change the ratio to view</em>
+   ) 
 }
 export default App;
